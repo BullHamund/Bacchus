@@ -1,0 +1,30 @@
+{
+  "name": "react-express-bacchus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "jade": "^1.11.0",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BullHamund/Bacchus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BullHamund/Bacchus/issues"
+  },
+  "homepage": "https://github.com/BullHamund/Bacchus#readme",
+  "description": ""
+}
