@@ -1,3 +1,4 @@
 node_modules/
 .DS_Store
 client/build/
+client/node_modules/
