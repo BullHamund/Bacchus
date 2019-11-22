@@ -1,15 +1,18 @@
 {
   "name": "react-express-bacchus",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node index.js",
+    "start:prod": "node index.js && npm run build",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "build": "cd client && npm run build"
+  },
+  "engines": {
+    "node": "12.8.1",
+    "npm": "6.x"
   },
   "loader": "css-loader",
   "options": {
@@ -19,15 +22,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
+    "bootstrap": "^4.3.1",
     "cookie-parser": "^1.4.4",
     "debug": "^4.1.1",
     "express": "^4.17.1",
+    "highlight.js": "^9.16.2",
     "http-errors": "^1.7.3",
-    "jade": "^1.11.0",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "reactstrap": "^8.1.1"
   },
   "devDependencies": {
     "concurrently": "^5.0.0",
+    "if-env": "^1.0.4",
     "nodemon": "^1.19.4"
   },
   "repository": {

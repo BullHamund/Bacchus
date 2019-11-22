@@ -1,26 +1,37 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Page from './components/Page';
 import Footer from './components/Footer';
 import Navigation from './components/Navbar';
-class App extends Component {
-  render() {
-    const App = () => (
-      <div>
-        <Navigation/>
-        <Page/>
-        <Footer/>
+import Loading from "./components/Loading";
+import Profile from "./views/Profile";
+import { useAuth0 } from "./react-auth0-spa";
+import history from "./utils/history";
+import PrivateRoute from "./components/PrivateRoute";
+import {Container} from 'reactstrap';
 
-        
-      </div>
-    )
-    return (
-      <Switch>
-        <App/>
-      </Switch>
-    );
+
+const App = () => {
+  const { loading } = useAuth0();
+
+      if (loading) {
+        return <Loading />;
+      }
+      return (
+        <Router history={history}>
+          <div id="app" className="d-flex flex-column h-100">
+          <Navigation/>
+            <Container className="flex-grow-1 mt-5">
+              <Switch>
+                <Route path="/" exact component={Page} />
+                <PrivateRoute path="/profile" component={Profile} />
+              </Switch>
+            </Container>
+            <Footer />
+          </div>
+        </Router>
+      );
   }
-}
 
 export default App;
