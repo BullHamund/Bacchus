@@ -8,8 +8,11 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "build": "cd client && npm run build"
+  },
+  "engines": {
+    "node": "12.8.1",
+    "npm": "6.x"
   },
   "loader": "css-loader",
   "options": {
@@ -29,7 +32,6 @@
     "express": "^4.17.1",
     "highlight.js": "^9.16.2",
     "http-errors": "^1.7.3",
-    "jade": "^1.11.0",
     "morgan": "^1.9.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -38,6 +40,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.0.0",
+    "if-env": "^1.0.4",
     "nodemon": "^1.19.4"
   },
   "repository": {
