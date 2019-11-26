@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-
+//const cookieParser = require('cookie-parser');
 const app = express();
 
 // Serve the static files from the React app
@@ -15,7 +15,7 @@ app.get('/api/getList', (req,res) => {
 
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+    res.sendFile('/client/build/index.html');
 });
 
 const port = process.env.PORT || 5000;
