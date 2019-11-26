@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
   Collapse,
   Container,
@@ -28,8 +27,10 @@ const Navigation = (props) => {
     });
 
     return (
-      <div className="nav-container">
-        <Navbar color="light" light expand="md">
+        <div className="nav-container">
+        {/* <Navbar className= "justify-content-end"> */}
+       
+        <Navbar color="dark" light expand="md">
           <Container>
             <NavbarBrand className="logo" />
             <NavbarToggler onClick={toggle} />
@@ -42,16 +43,70 @@ const Navigation = (props) => {
                     exact
                     activeClassName="router-link-exact-active"
                   >
-                    Home
+                    Bacchus
                   </NavLink>
                 </NavItem>
               </Nav>
+​
+              <Nav className="mr-auto" className= "justify-content-end" navbar>
+                <NavItem>
+                  <NavLink
+                    tag={RouterNavLink}
+                    to="/"
+                    exact
+                    activeClassName="router-link-exact-active"
+                  >
+                    About
+                  </NavLink>
+                </NavItem>
+              </Nav>
+​
+              <Nav className="mr-auto" className= "justify-content-end" navbar>
+                <NavItem>
+                  <NavLink
+                    tag={RouterNavLink}
+                    to="/"
+                    exact
+                    activeClassName="router-link-exact-active"
+                  >
+                    Articles
+                  </NavLink>
+                </NavItem>
+              </Nav>
+​
+              <Nav className="mr-auto" className= "justify-content-end" navbar>
+                <NavItem>
+                  <NavLink
+                    tag={RouterNavLink}
+                    to="/"
+                    exact
+                    activeClassName="router-link-exact-active"
+                  >
+                    Search
+                  </NavLink>
+                </NavItem>
+              </Nav>
+​
+              <Nav className="mr-auto" className= "justify-content-end" navbar>
+                <NavItem>
+                  <NavLink
+                    tag={RouterNavLink}
+                    to="/"
+                    exact
+                    activeClassName="router-link-exact-active"
+                  >
+                    Events
+                  </NavLink>
+                </NavItem>
+              </Nav>
+​
+​
               <Nav className="d-none d-md-block" navbar>
                 {!isAuthenticated && (
                   <NavItem>
                     <Button
                       id="qsLoginBtn"
-                      color="primary"
+                      color="warning"
                       className="btn-margin"
                       onClick={() => loginWithRedirect({})}
                     >
@@ -95,7 +150,7 @@ const Navigation = (props) => {
                   <NavItem>
                     <Button
                       id="qsLoginBtn"
-                      color="primary"
+                      color="warning"
                       block
                       onClick={() => loginWithRedirect({})}
                     >
@@ -145,6 +200,7 @@ const Navigation = (props) => {
             </Collapse>
           </Container>
         </Navbar>
+     
       </div>
     );
 }
