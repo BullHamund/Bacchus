@@ -1,0 +1,21 @@
+/* #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  } */
+  
+  .content {
+    flex: 1 0 auto;
+    padding: 10px;
+  }
+  
+  .footer {
+    display: flex;
+    flex-shrink: 0;
+    text-align: center;
+    background-color: rgb(58, 56, 56);
+    color: rgb(255, 255, 255);
+    height: 100%;
+    flex-direction: column;
+    padding-top: 10px;
+  }
