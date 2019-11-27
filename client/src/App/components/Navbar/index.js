@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled from 'styled-components';
 import {
   Collapse,
   Container,
@@ -17,6 +18,7 @@ import {
 } from "reactstrap";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import { useAuth0 } from "../../react-auth0-spa";
+
 const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
@@ -28,8 +30,7 @@ const Navigation = (props) => {
 
     return (
         <div className="nav-container">
-        {/* <Navbar className= "justify-content-end"> */}
-       
+        
         <Navbar color="dark" light expand="md">
           <Container>
             <NavbarBrand className="logo" />
@@ -203,6 +204,7 @@ const Navigation = (props) => {
      
       </div>
     );
-}
+ }
 
 export default Navigation;
+
