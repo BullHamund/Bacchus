@@ -6,10 +6,10 @@ var request = require("request");
 // var db = require("../models");
 var router = express.Router();
 
-router.get("/api/getDrinks", (req, res) => {
-    
+router.get("/api/getDrinks/:search", (req, res) => {
+  console.log(req.params.search);  
     // getData = query => {
-        axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Margarita")
+        axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+req.params.search)
         .then(function (res) {
             // handle success
             console.log(res.data);

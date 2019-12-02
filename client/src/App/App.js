@@ -10,6 +10,7 @@ import { useAuth0 } from "./react-auth0-spa";
 import history from "./utils/history";
 import PrivateRoute from "./components/PrivateRoute";
 import {Container} from 'reactstrap';
+import Home from './pages/Home';
 
 
 const App = () => {
@@ -25,7 +26,7 @@ const App = () => {
         
             <Container className="flex-grow-1 mt-5">
               <Switch>
-                <Route path="/" exact component={Page} />
+                <Route path="/" exact component={Home} />
                 <PrivateRoute path="/profile" component={Profile} />
               </Switch>
             </Container>
