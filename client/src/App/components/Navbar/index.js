@@ -31,7 +31,7 @@ const logoutWithRedirect = () =>
 return (
 <div className="nav-container">
 
-<Navbar color="dark" light expand="md">
+<Navbar color="light" light expand="md">
   <Container>
     <NavbarBrand className="logo" />
     <NavbarToggler onClick={toggle} />

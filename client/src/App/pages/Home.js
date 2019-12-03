@@ -7,6 +7,7 @@ import {
   InputGroup, InputGroupAddon, InputGroupText, Input
 } from 'reactstrap';
 
+
 import styled from 'styled-components';
 
 const Styles = styled.div``;
@@ -17,9 +18,23 @@ class Home extends Component {
   constructor(props){
     super(props);
     this.state ={
-      search:""
+      search:"",
+      recipe:[],
+      events:[]
     }
   }
+
+  componentDidMount() {
+    axios.get("/api/getEvents").then((res) => {
+      console.log(res);
+      this.setState({events:res.data.events})
+    }) 
+  }
+
+  componentDidUpdate() {
+    console.log(this.state.events);
+  }
+
   handleChange = (event) => {
   console.log(event.target.value);
   this.setState({search:event.target.value})
@@ -27,8 +42,10 @@ class Home extends Component {
   } 
   handleSearch = () => {
     console.log(this.state.search)
-    axios.get("/api/getDrinks/"+this.state.search).then(function(res){
+    axios.get("/api/getDrinks/"+this.state.search).then((res) => {
       console.log(res);
+      this.setState({recipe:res.data.drinks})
+
     })
 
   }
@@ -48,12 +65,22 @@ class Home extends Component {
           </Container>
         </Jumbotron>
       </Styles>
-      ​
+      
+      <div>
+        {
+          this.state.recipe.map((item) =>{
+            return <p>{item.strDrink}</p>
+
+          })
+        }
+      </div>​
+
+
       <div>
         <Card>
           <Container>
               <Row>
-                  <Col>Who is Bacchus?</Col>
+                  <Col>Bacchus?</Col>
               </Row>
               <br/>
               Bacchus was the Roman god of agriculture, wine and fertility, equivalent to the Greek god Dionysus. Dionysius was said to be the last god to join the twelve Olympians. Supposedly, Hestia gave up her seat for him. His plants were vines and twirling ivy.
