@@ -6,7 +6,7 @@ var request = require("request");
 // var db = require("../models");
 var router = express.Router();
 
-router.get("/api/getDrinks/:search", (req, res) => {
+router.get("/getDrinks/:search", (req, res) => {
   console.log(req.params.search);  
     // getData = query => {
         axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+req.params.search)
@@ -21,7 +21,7 @@ router.get("/api/getDrinks/:search", (req, res) => {
     // }
 })
 
-router.get("/api/getEvents", (req, res) => {
+router.get("/getEvents", (req, res) => {
 
     axios.get("https://www.eventbriteapi.com/v3/events/search/?subcategories=10004&token=R2J7ZIL5EV64IE2GKMW5")
     .then(function (res) {
@@ -34,7 +34,7 @@ router.get("/api/getEvents", (req, res) => {
       }) 
     })
 
-    router.get("/api/getArticles", (req, res) => {
+    router.get("/getArticles", (req, res) => {
 
 
     request('https://imbibemagazine.com/', (error, response, html) => {

@@ -3,13 +3,15 @@ const path = require('path');
 //const { join } = require("path");
 //const cookieParser = require('cookie-parser');
 const app = express();
-const routes = require("./routes/api");
+const routes = require("./routes");
 
 //app.use(morgan("dev"));
+app.use(express.urlencoded({ extended: true }));
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')))
     .use;
+app.use(express.static("public"));
 
 app.use(routes);
 
