@@ -70,11 +70,7 @@ class Home extends Component {
     <Row>
             <Col size="xs-12">
               {!this.state.recipes.length ? (
-
-                <h1 className="text-center"></h1>
-
-                <h1 className="text-center">No Drinks to Display</h1>
-
+                  <h1 className="text-center">No Drinks to Display</h1>
               ) : (
                 <RecipeList>
                   {this.state.recipes.map(recipe => {
