@@ -41,7 +41,6 @@ class Home extends Component {
  <Jumbotron fluid className="Jumbo">
     <Container fluid>
       <h1>Cheers to the Good Times</h1>
-        <Button variant="outline-dark">Randomize</Button>
         <InputGroup>
         <Input
                         name="recipeSearch"
