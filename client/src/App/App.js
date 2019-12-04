@@ -35,7 +35,6 @@ const App = () => {
                 <PrivateRoute path="/profile" component={Profile} />
               </Switch>
             </Container>
-            <Footer />
           </div>
         </Router>
       );
