@@ -110,15 +110,18 @@ class Home extends Component {
             Honest mistake, more than half of us made it too, but the point is
             he was, to put it in lame man's terms, the God of revelry...like, partying man!
             Sophisticatedly.
+            <br></br>
 
             So go ahead and search the database of cocktaildb.com
             for nearly 600 cocktail recipes from the classic to not so...well...
             not so popular since the 1970's nearly killed over a hundred years of
             classic cocktail culture.
+            <br></br>
 
             Then feel free to follow the links in the NavBAr ro search for articles
             from some of the days premier cocktail blogs and events at some of your
             local cocktail havens.
+            <br></br>
 
             And remember, as a child, Bacchus was tutored by Thanos, who was a great lover of wine and often had to be carried on the back of a donkey.
           </Container>
