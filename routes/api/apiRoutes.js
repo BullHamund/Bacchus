@@ -24,7 +24,7 @@ router.get("/getDrinks", (req, res) => {
 
 router.get("/getEvents", (req, res) => {
 
-    axios.get("https://www.eventbriteapi.com/v3/events/search/?subcategories=10004&token=/v3/users/me/?token=4DT7BEO4FY4GNOIQNU6T")
+    axios.get("https://www.eventbriteapi.com/v3/events/search/?subcategories=10004&token=/v3/users/me/?token=R2J7ZIL5EV64IE2GKMW5")
     .then(function (response) {
         // handle success
         console.log(response.data);
