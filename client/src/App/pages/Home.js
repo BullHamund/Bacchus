@@ -72,8 +72,6 @@ class Home extends Component {
 
                 <h1 className="text-center"></h1>
 
-                <h1 className="text-center">No Drinks to Display</h1>
-
               ) : (
                 <RecipeList>
                   {this.state.recipes.map(recipe => {
