@@ -7,10 +7,6 @@ const routes = require("./routes");
 
 app.use(express.static("public"));
 
-
-=======
-app.use(express.static("public"));
-
 app.use(routes);
 
 const port = process.env.PORT || 3001;
