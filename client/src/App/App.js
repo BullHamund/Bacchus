@@ -15,6 +15,8 @@ import Events from './pages/Events.js';
 import Search from './pages/SearchResults.js';
 
 
+
+
 const App = () => {
   const { loading } = useAuth0();
 
