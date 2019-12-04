@@ -52,14 +52,14 @@ class Home extends Component {
         <Styles>
           <Jumbotron fluid className="Jumbo">
             <Container fluid>
-              <h1>Bacchus must now his power resign...</h1>
+              <h1>Search for a cocktail...</h1>
 
               <InputGroup>
                 <Input
                   name="recipeSearch"
                   value={this.state.recipeSearch}
                   onChange={this.handleInputChange}
-                  placeholder="Search For Drinks"
+                  placeholder="...by name or ingredient!"
                 />
                 <InputGroupAddon addonType="append">
                   <Button
@@ -75,49 +75,55 @@ class Home extends Component {
             </Container>
           </Jumbotron>
         </Styles>
-        ​
+
         <div>
           <Container>
             <Row>
               <Col size="xs-12">
                 {!this.state.recipes.length ? (
-                  <h1 className="text-center">No Drinks to Display</h1>
+                  <h1 className="text-center">Bacchus must now his power resign!</h1>
                 ) : (
-                  <RecipeList>
-                    {this.state.recipes.map(recipe => {
-                      return (
-                        <RecipeListItem
-                          key={recipe.strDrink}
-                          title={recipe.strDrink}
-                          ingredients={recipe.strInstructions}
-                          thumbnail={recipe.strDrinkThumb}
-                        />
-                      );
-                    })}
-                  </RecipeList>
-                )}
+                    <RecipeList>
+                      {this.state.recipes.map(recipe => {
+                        return (
+                          <RecipeListItem
+                            key={recipe.strDrink}
+                            title={recipe.strDrink}
+                            ingredients={recipe.strInstructions}
+                            thumbnail={recipe.strDrinkThumb}
+                          />
+                        );
+                      })}
+                    </RecipeList>
+                  )}
               </Col>
             </Row>
           </Container>
           <Container>
             <Row>
-              <Col>Our Story</Col>
+              <Col>I am the only God of wine...</Col>
             </Row>
             <br></br>
-            tas ir teksta salikums, kuru izmanto poligrāfijā un maketēšanas
-            darbos. Lorem Ipsum ir kļuvis par vispārpieņemtu teksta aizvietotāju
-            kopš 16. gadsimta sākuma. Tajā laikā kāds nezināms iespiedējs
-            izveidoja teksta fragmentu, lai nodrukātu grāmatu ar burtu
-            paraugiem. Tas ir ne tikai pārdzīvojis piecus gadsimtus, bet bez
-            ievērojamām izmaiņām saglabājies arī mūsdienās, pārejot uz
-            datorizētu teksta apstrādi. Tā popularizēšanai 60-tajos gados
-            kalpoja Letraset burtu paraugu publicēšana ar Lorem Ipsum teksta
-            fragmentiem un, nesenā pagātnē, tādas maketēšanas programmas kā
-            Aldus PageMaker, kuras šablonu paraugos ir izmantots Lorem Ipsum
-            teksts.
+            ...err, spirits? We know what you're thinking, if this is
+            a cocktail app, why'd we name it after the Greek God of wine?
+            Well in fact, he was Roman god of agriculture, wine and fertility.
+            Honest mistake, more than half of us made it too, but the point is
+            he was, to put it in lame man's terms, the God of revelry...like, partying man!
+            Sophisticatedly.
+
+            So go ahead and search the database of cocktaildb.com
+            for nearly 600 cocktail recipes from the classic to not so...well...
+            not so popular since the 1970's nearly killed over a hundred years of
+            classic cocktail culture.
+
+            Then feel free to follow the links in the NavBAr ro search for articles
+            from some of the days premier cocktail blogs and events at some of your
+            local cocktail havens.
+
+            And remember, as a child, Bacchus was tutored by Thanos, who was a great lover of wine and often had to be carried on the back of a donkey.
           </Container>
         </div>
-        ​
+
       </div>
     );
   }
