@@ -6,4 +6,10 @@
 .bname {
     display: flex; 
     align-items: center;
+    /* padding-top: 8px; */
+}
+
+.bname-container {
+    padding-top: 17px !important;
+    padding-left: 0 !important;
 }
