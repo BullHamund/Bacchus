@@ -6,13 +6,14 @@ var request = require("request");
 // var db = require("../models");
 var router = express.Router();
 
-router.get("/api/getDrinks/:search", (req, res) => {
-  console.log(req.params.search);  
+router.get("/getDrinks", (req, res) => {
+     console.log("getDrinks")
     // getData = query => {
-        axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+req.params.search)
-        .then(function (res) {
+        axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php",  { params: req.query })
+        .then(function (response) {
             // handle success
-            console.log(res.data);
+            console.log(response.data);
+            res.json(response.data)
           })
           .catch(function (error) {
             // handle error
@@ -21,12 +22,13 @@ router.get("/api/getDrinks/:search", (req, res) => {
     // }
 })
 
-router.get("/api/getEvents", (req, res) => {
+router.get("/getEvents", (req, res) => {
 
-    axios.get("https://www.eventbriteapi.com/v3/events/search/?subcategories=10004&token=R2J7ZIL5EV64IE2GKMW5")
-    .then(function (res) {
+    axios.get("https://www.eventbriteapi.com/v3/events/search/?subcategories=10004&token=/v3/users/me/?token=4DT7BEO4FY4GNOIQNU6T")
+    .then(function (response) {
         // handle success
-        console.log(res.data);
+        console.log(response.data);
+        res.json(response.data)
       })
       .catch(function (error) {
         // handle error
@@ -34,7 +36,7 @@ router.get("/api/getEvents", (req, res) => {
       }) 
     })
 
-    router.get("/api/getArticles", (req, res) => {
+    router.get("/getArticles", (req, res) => {
 
 
     request('https://imbibemagazine.com/', (error, response, html) => {
@@ -54,6 +56,7 @@ router.get("/api/getEvents", (req, res) => {
       parsedData.push(articleData)
       console.log(parsedData);
     });
+    res.json(parsedData)
   }
 });
     })
