@@ -1,11 +1,25 @@
-import React, { Component, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+// import { Link } from "react-router-dom";
 import {
-  Card, Button, Container, Row, Col ,InputGroup, InputGroupAddon, Input, CardTitle,
-  CardText, CardImg, CardImgOverlay
-} from 'reactstrap';
+  Card,
+  Button,
+  // CardImg,
+  CardTitle,
+  Container,
+  Row,
+  Col,
+  CardText,
+  // CardColumns,
+  // CardSubtitle,
+  // CardBody,
+  // Jumbotron,
+  InputGroup,
+  InputGroupAddon,
+  // InputGroupText,
+  Input
+} from "reactstrap";
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
-import styled from 'styled-components';
+import styled from "styled-components";
 import API from "../utils/API";
 import wall from '../assets/images/wall13.jpg'
 
@@ -26,6 +40,7 @@ const style2 = {
 
 
 
+const Styles = styled.div``;
 
 class Home extends Component {
   state = {
@@ -62,7 +77,7 @@ class Home extends Component {
                         name="recipeSearch"
                         value={this.state.recipeSearch}
                         onChange={this.handleInputChange}
-                        placeholder="Search For Drinks"
+                        placeholder="Search for a cocktail"
                       />
         <InputGroupAddon addonType="append">
         <Button
@@ -88,9 +103,7 @@ class Home extends Component {
     <Row>
             <Col size="xs-12">
               {!this.state.recipes.length ? (
-
-                <h1 className="text-center"></h1>
-
+                <h1 className = "text-center"> </h1>
               ) : (
                 <RecipeList>
                   {this.state.recipes.map(recipe => {
