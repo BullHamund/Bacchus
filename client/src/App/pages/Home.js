@@ -12,6 +12,8 @@ import {
   InputGroupAddon,
   Input
 } from "reactstrap";
+import Cards from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns';
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
 // import styled from "styled-components";
 import API from "../utils/API";
@@ -128,6 +130,7 @@ class Home extends Component {
             </Col>
           </Row>
       </Container>
+
       
       <Container>
       <Row>
