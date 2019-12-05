@@ -7,7 +7,7 @@ const routes = require("./routes");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
+app.use(express.static("client/public/build"));
 
 app.use(routes);
 
