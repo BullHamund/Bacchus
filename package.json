@@ -11,7 +11,7 @@
     "build": "cd client && npm run build"
   },
   "engines": {
-    "node": "12.8.1",
+    "node": "11.14.0",
     "npm": "6.x"
   },
   "loader": "css-loader",
