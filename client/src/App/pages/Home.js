@@ -13,8 +13,13 @@ import wall from '../assets/images/wall13.jpg'
 const style = {
   "color": "white",
   "text-align": "center",
-  "font-family": "lobster",
-  "font-size": "50px"
+  "font-family": "Berkshire Swash",
+  "font-size": "70px"
+}
+
+const style2 = {
+  "font-size": "40px",
+  "font-family": "Asul",
 }
 
 
@@ -46,10 +51,10 @@ class Home extends Component {
   render() {
   return(<div>
 
- <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat', height: '91vh'}}>
+ <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat'}}>
 
     
-      <Col lg="6" style={{padding:'200px', color:'white'}}>
+      <Col lg="6" style={{padding:'180px', color:'white'}}>
       <h1 style={style}>Cheers to the Good Times</h1>
         <InputGroup>
         <Input
@@ -63,6 +68,7 @@ class Home extends Component {
                         onClick={this.handleFormSubmit}
                         type="success"
                         className="input-lg"
+                        outline color ="warning"
                       >
                         Search
                       </Button>
@@ -114,20 +120,20 @@ class Home extends Component {
   <Row>
   <Col sm="4">
   <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
-        <CardTitle style={style}>What?</CardTitle>
-        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+        <CardTitle style={style2}>What?</CardTitle>
+        <CardText> </CardText>
       </Card>
   </Col>
   <Col sm="4">
   <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
-        <CardTitle style={style}>Why?</CardTitle>
-        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+        <CardTitle style={style2}>Why?</CardTitle>
+        <CardText></CardText>
       </Card>
   </Col>
   <Col sm="4">
   <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
-        <CardTitle style={style}>Who?</CardTitle>
-        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+        <CardTitle style={style2}>Who?</CardTitle>
+        <CardText></CardText>
       </Card>
   </Col>
   </Row>
