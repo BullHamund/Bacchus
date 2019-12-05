@@ -29,14 +29,14 @@ const style = {
 const style2 = {
   "color":"black",
   "font-size": "40px",
-  "font-family": "Asul",
+  "font-family": "fantasy",
   "text-align": "center",
 }
 
 const style3 = {
   "color": "black",
   "font-size": "19px",
-  "font-family": "sans",
+  "font-family": "fantasy",
 }
 
 
@@ -99,12 +99,12 @@ class Home extends Component {
 <div>
   
     <Container>
-    <Row>
-            <Col size="xs-12">
+    <Row >
+            <Col size="xs-12" >
               {!this.state.recipes.length ? (
                 <h1 className = "text-center"> </h1>
               ) : (
-                <RecipeList>
+                <RecipeList >
                   {this.state.recipes.map(recipe => {
                     return (
                       <RecipeListItem
