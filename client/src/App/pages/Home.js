@@ -16,6 +16,7 @@ import { RecipeList, RecipeListItem } from "../components/RecipeList";
 import styled from "styled-components";
 import API from "../utils/API";
 import wall from '../assets/images/wall7.jpg'
+import paper from '../assets/images/paper.jpg'
 
 
 const style = {
@@ -26,15 +27,19 @@ const style = {
 }
 
 const style2 = {
+  "color":"black",
   "font-size": "40px",
   "font-family": "Asul",
   "text-align": "center",
 }
 
+const style3 = {
+  "color": "black",
+  "font-size": "19px",
+  "font-family": "sans",
+}
 
 
-
-const Styles = styled.div``;
 
 class Home extends Component {
   state = {
@@ -127,21 +132,21 @@ class Home extends Component {
   
   <Row>
   <Col sm="4">
-  <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
+  <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
         <CardTitle style={style2}>What?</CardTitle>
-        <CardText>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+        <CardText style={style3}>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
       </Card>
   </Col>
   <Col sm="4">
-  <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
+  <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
         <CardTitle style={style2}>Why?</CardTitle>
-        <CardText>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+        <CardText style={style3}>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
       </Card>
   </Col>
   <Col sm="4">
-  <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
+  <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
         <CardTitle style={style2}>Who?</CardTitle>
-        <CardText>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+        <CardText style={style3}>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
       </Card>
   </Col>
   </Row>
