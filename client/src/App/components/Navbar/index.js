@@ -18,6 +18,11 @@ import {
 } from "reactstrap";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import { useAuth0 } from "../../react-auth0-spa";
+import css from './style.css'
+
+const style = {
+  color: "white"
+}
 
 const Navigation = props => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,10 +34,10 @@ const Navigation = props => {
     });
 
   return (
-    <div className="nav-container">
-      <Navbar color="light" light expand="md">
+    <div>
+      <Navbar expand="md">
         <Container>
-          <NavbarBrand className="logo" style={{bacground:''}}/>
+          <NavbarBrand className="logo"/>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
@@ -48,7 +53,7 @@ const Navigation = props => {
               </NavItem>
             </Nav>
             ​ ​
-            <Nav className="mr-auto" className="justify-content-end" navbar>
+            {/* <Nav className="mr-auto" className="justify-content-end" navbar>
               <NavItem>
                 <NavLink
                   tag={RouterNavLink}
@@ -59,7 +64,7 @@ const Navigation = props => {
                   Search
                 </NavLink>
               </NavItem>
-            </Nav>
+            </Nav> */}
             ​
             <Nav className="mr-auto" className="justify-content-end" navbar>
               <NavItem>
@@ -91,7 +96,7 @@ const Navigation = props => {
                   <NavItem>
                     <Button
                       id="qsLoginBtn"
-                      color="warning"
+                      outline color="warning"
                       className="btn-margin"
                       onClick={() => loginWithRedirect({})}
                     >
