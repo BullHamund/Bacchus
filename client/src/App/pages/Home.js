@@ -133,15 +133,20 @@ class Home extends Component {
 
 
 
-      <div style={{height:'80vh'}}>
+      <div style={{height:'90vh'}}>
         <Container>
           <Row>
             <Col>
             </Col>
-            <Col lg="12">
-              <Card color="transparent" style={{ borderColor: '#333' }}>
-                  <CardTitle style={{color:'white', "font-size": "50px", "font-family": "fantasy", textAlign:'center'}}>sdgfsd</CardTitle>
-                  <CardText style={{color:'white', "font-size": "25px", "font-family": "fantasy", textAlign:'center'}}>asdgadsg</CardText>
+            <Col lg="12" style={{padding:'150px'}}>
+              <Card color="transparent" style={{ borderColor: '#333', }}>
+                  <CardTitle style={{color:'white', "font-size": "50px", "font-family": "fantasy", textAlign:'center'}}>Bacchus must now his power resign!</CardTitle>
+                  <CardText style={{color:'white', "font-size": "25px", "font-family": "fantasy", textAlign:'center'}}>...err, spirits? We know what you're thinking, if this is
+            a cocktail app, why'd we name it after the Greek God of wine?
+            Well in fact, he was Roman god of agriculture, wine and fertility.
+            Honest mistake, more than half of us made it too, but the point is
+            he was, to put it in lame man's terms, the God of revelry...like, partying man!
+            Sophisticatedly.</CardText>
               </Card>
             </Col>
         
