@@ -31,7 +31,6 @@ const App = () => {
                 <Route path="/" exact component={Page} />
                 <Route path="/articles" exact component={Articles} />
                 <Route path="/events" exact component={Events} />
-                {/* <Route path="/search" exact component={Search} /> */}
                 <PrivateRoute path="/profile" component={Profile} />
               </Switch>
              
