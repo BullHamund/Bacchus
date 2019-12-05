@@ -29,7 +29,7 @@ return(<div>
                   This is a longer card with supporting text below as a natural lead-in to
                   additional content. This content is a little bit longer.
                  </Card.Text>
-                  <Button outline color="primary">warning</Button>
+                  <Button outline color="primary">Follow</Button>
             </Card.Body>
         </Card>
 
@@ -41,7 +41,7 @@ return(<div>
                   This is a longer card with supporting text below as a natural lead-in to
                   additional content. This content is a little bit longer.
                  </Card.Text>
-                  <Button outline color="primary">warning</Button>
+                  <Button outline color="primary">Follow</Button>
             </Card.Body>
         </Card>
 
@@ -53,7 +53,7 @@ return(<div>
                   This is a longer card with supporting text below as a natural lead-in to
                   additional content. This content is a little bit longer.
                  </Card.Text>
-                  <Button outline color="primary">warning</Button>
+                  <Button outline color="primary">Follow</Button>
             </Card.Body>
         </Card>
 
@@ -65,7 +65,7 @@ return(<div>
                   This is a longer card with supporting text below as a natural lead-in to
                   additional content. This content is a little bit longer.
                  </Card.Text>
-                  <Button outline color="primary">warning</Button>
+                  <Button outline color="primary">Follow</Button>
             </Card.Body>
         </Card>
 
@@ -77,7 +77,7 @@ return(<div>
                   This is a longer card with supporting text below as a natural lead-in to
                   additional content. This content is a little bit longer.
                  </Card.Text>
-                  <Button outline color="primary">warning</Button>
+                  <Button outline color="primary">Follow</Button>
             </Card.Body>
         </Card>
 
@@ -89,7 +89,7 @@ return(<div>
                   This is a longer card with supporting text below as a natural lead-in to
                   additional content. This content is a little bit longer.
                  </Card.Text>
-                  <Button outline color="primary">warning</Button>
+                  <Button outline color="primary">Follow</Button>
             </Card.Body>
         </Card>
 
