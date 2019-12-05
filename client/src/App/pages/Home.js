@@ -13,13 +13,14 @@ import wall from '../assets/images/wall13.jpg'
 const style = {
   "color": "white",
   "text-align": "center",
-  "font-family": "Berkshire Swash",
+  "font-family": "Redressed",
   "font-size": "70px"
 }
 
 const style2 = {
   "font-size": "40px",
   "font-family": "Asul",
+  "text-align": "center",
 }
 
 
