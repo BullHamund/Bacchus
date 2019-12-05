@@ -153,7 +153,7 @@ class Home extends Component {
   <Col sm="4" style={style4}>
   <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
         <CardTitle style={style2}>WHO?</CardTitle>
-        <CardText style={style3}>For obvious reasons, this app is perfect for users of legal drinking age within the drinking age limit of your country. For those who wish to learn more about the Cocktail Culture. For those you just want to have a good time. </CardText>
+        <CardText style={style3}>For obvious reasons, this app is perfect for users of legal drinking age within the drinking age limit of your country. For those who wish to learn more about the Cocktail Culture. For those who just want to have a good time. </CardText>
       </Card>
   </Col>
   </Row>
