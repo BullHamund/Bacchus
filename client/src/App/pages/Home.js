@@ -1,15 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Card, Button, CardImg, CardTitle, Container, Row, Col ,CardText, CardColumns,
-  CardSubtitle, CardBody, Jumbotron, 
-  InputGroup, InputGroupAddon, InputGroupText, Input
+  Card, Button, Container, Row, Col ,InputGroup, InputGroupAddon, Input, CardTitle,
+  CardText, CardImg, CardImgOverlay
 } from 'reactstrap';
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
 import styled from 'styled-components';
 import API from "../utils/API";
- 
-const Styles = styled.div``;
+import wall from '../assets/images/wall13.jpg'
+
+
+const style = {
+  "color": "white",
+  "text-align": "center",
+  "font-family": "lobster",
+  "font-size": "50px"
+}
+
+
 
 
 
@@ -37,10 +45,12 @@ class Home extends Component {
   };
   render() {
   return(<div>
-<Styles>
- <Jumbotron fluid className="Jumbo">
-    <Container fluid>
-      <h1>Cheers to the Good Times</h1>
+
+ <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat', height: '91vh'}}>
+
+    
+      <Col lg="6" style={{padding:'200px', color:'white'}}>
+      <h1 style={style}>Cheers to the Good Times</h1>
         <InputGroup>
         <Input
                         name="recipeSearch"
@@ -56,12 +66,14 @@ class Home extends Component {
                       >
                         Search
                       </Button>
-          {/* <InputGroupText>Search</InputGroupText> */}
         </InputGroupAddon>
       </InputGroup>
-    </Container>
-  </Jumbotron>
-</Styles>
+     </Col>
+     <Col lg="5"></Col>
+    
+ </div>
+
+
 ​
 <div>
   
@@ -90,18 +102,40 @@ class Home extends Component {
             </Col>
           </Row>
       </Container>
-    
+      
       <Container>
-        <Row>
-            <Col>Our Story</Col>
-        </Row>
-        <br></br>
-        tas ir teksta salikums, kuru izmanto poligrāfijā un maketēšanas darbos. Lorem Ipsum ir kļuvis par vispārpieņemtu teksta aizvietotāju kopš 16. gadsimta sākuma. Tajā laikā kāds nezināms iespiedējs izveidoja teksta fragmentu, lai nodrukātu grāmatu ar burtu paraugiem. Tas ir ne tikai pārdzīvojis piecus gadsimtus, bet bez ievērojamām izmaiņām saglabājies arī mūsdienās, pārejot uz datorizētu teksta apstrādi. Tā popularizēšanai 60-tajos gados kalpoja Letraset burtu paraugu publicēšana ar Lorem Ipsum teksta fragmentiem un, nesenā pagātnē, tādas maketēšanas programmas kā Aldus PageMaker, kuras šablonu paraugos ir izmantots Lorem Ipsum teksts.
-    </Container>
+      <Row>
+      <Card body color="transparent" style={{height:'30vh', paddingTop:'30px'}}>
+        <CardTitle style={style}>Overview</CardTitle>
+      </Card>
+      </Row>
+      </Container>
   
-  
-</div>
-​
+  <Row>
+  <Col sm="4">
+  <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
+        <CardTitle style={style}>What?</CardTitle>
+        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+      </Card>
+  </Col>
+  <Col sm="4">
+  <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
+        <CardTitle style={style}>Why?</CardTitle>
+        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+      </Card>
+  </Col>
+  <Col sm="4">
+  <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
+        <CardTitle style={style}>Who?</CardTitle>
+        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+      </Card>
+  </Col>
+  </Row>
+
+
+
+     
+​</div>
   </div>);
   }
 }
