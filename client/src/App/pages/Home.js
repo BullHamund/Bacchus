@@ -138,19 +138,19 @@ class Home extends Component {
   <Col sm="4" style={style4}>
   <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
         <CardTitle style={style2}>WHAT?</CardTitle>
-        <CardText style={style3}>The goal of this app is to become a source of knowledge for all who wish to exand their curiosity in the cocktail culture. Not only do we provide ways on how to make drinks, but we also inform you of local cocktail events near you. In addition, we give you the opportunit to scrape through articles related to the cocktail culture. Now what is the Cocktail Culture? We like to describe it as a community of fellow brothers and sisters who have one similarity, Mixology.  It's about the drinks, the people who make them, the places they make them and the people who drink them. It's about the history and the who, what, when, where and why. It's about the fellowship of gathering and the hospitality of hosting. It's about sharing our worlds with one another. Physically and educationally. </CardText>
+        <CardText style={style3}>The goal of this app is to become a source of knowledge for all who wish to exand their curiosity in the cocktail culture. Not only do we provide ways on how to make drinks, but we also inform you of local cocktail events near you. In addition, we give you the opportunit to scrape through articles related to the cocktail culture. Now what is the Cocktail Culture? We like to describe it as a community of fellow brothers and sisters who have one similarity, Mixology. </CardText>
       </Card>
   </Col>
   <Col sm="4" style={style4}>
   <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
         <CardTitle style={style2}>WHY?</CardTitle>
-        <CardText style={style3}></CardText>
+        <CardText style={style3}>We do it because we like to show people that there is more to drinking alcohol. There is more to ordering the same drink at the bar on a friday night. There is more to holding up a line at a bar because you dont know what to order.  It's about the drinks, the people who make them, the places they make them and the people who drink them. It's about the history, it's about the fellowship of gathering and the hospitality of hosting. It's about sharing our worlds with one another. Physically and educationally. It's about all that and much more.</CardText>
       </Card>
   </Col>
   <Col sm="4" style={style4}>
   <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
         <CardTitle style={style2}>WHO?</CardTitle>
-        <CardText style={style3}></CardText>
+        <CardText style={style3}>For obvious reasons, this app is perfect for users of legal drinking age within the drinking age limit of your country. For those who wish to learn more about the Cocktail Culture. For those you just want to have a good time. </CardText>
       </Card>
   </Col>
   </Row>
