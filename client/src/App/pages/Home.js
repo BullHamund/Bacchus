@@ -74,7 +74,7 @@ class Home extends Component {
   render() {
   return(<div>
 
- <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat', height:'100vh'}}>
+ <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat', height:'90vh', position:'unset'}}>
 
     
       <Col lg="6" style={{padding:'150px', color:'white'}}>
@@ -131,7 +131,28 @@ class Home extends Component {
           </Row>
       </Container>
 
-      
+
+
+      <div style={{height:'80vh'}}>
+        <Container>
+          <Row>
+            <Col>
+            </Col>
+            <Col lg="12">
+              <Card color="transparent" style={{ borderColor: '#333' }}>
+                  <CardTitle style={{color:'white', "font-size": "50px", "font-family": "fantasy", textAlign:'center'}}>sdgfsd</CardTitle>
+                  <CardText style={{color:'white', "font-size": "25px", "font-family": "fantasy", textAlign:'center'}}>asdgadsg</CardText>
+              </Card>
+            </Col>
+        
+          </Row>
+        </Container>
+      </div>
+
+
+
+
+
       <Container>
       <Row>
       <Card body color="transparent" style={{height:'25vh', paddingTop:'30px'}}>
