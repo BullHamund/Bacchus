@@ -1,21 +1,21 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import {
-  Card,
+  // Card,
   Button,
-  CardImg,
-  CardTitle,
+  // CardImg,
+  // CardTitle,
   Container,
   Row,
   Col,
-  CardText,
-  CardColumns,
-  CardSubtitle,
-  CardBody,
+  // CardText,
+  // CardColumns,
+  // CardSubtitle,
+  // CardBody,
   Jumbotron,
   InputGroup,
   InputGroupAddon,
-  InputGroupText,
+  // InputGroupText,
   Input
 } from "reactstrap";
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
