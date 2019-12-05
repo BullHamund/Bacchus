@@ -70,7 +70,7 @@ class Home extends Component {
   render() {
   return(<div>
 
- <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat'}}>
+ <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat', height:'100vh'}}>
 
     
       <Col lg="6" style={{padding:'180px', color:'white'}}>
@@ -128,7 +128,7 @@ class Home extends Component {
       
       <Container>
       <Row>
-      <Card body color="transparent" style={{height:'30vh', paddingTop:'30px'}}>
+      <Card body color="transparent" style={{height:'25vh', paddingTop:'30px'}}>
         <CardTitle style={style}>Overview</CardTitle>
       </Card>
       </Row>
@@ -137,20 +137,20 @@ class Home extends Component {
   <Row>
   <Col sm="4" style={style4}>
   <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
-        <CardTitle style={style2}>What?</CardTitle>
-        <CardText style={style3}>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+        <CardTitle style={style2}>WHAT?</CardTitle>
+        <CardText style={style3}>The goal of this app is to become a source of knowledge for all who wish to exand their curiosity in the cocktail culture. Not only do we provide ways on how to make drinks, but we also inform you of local cocktail events near you. In addition, we give you the opportunit to scrape through articles related to the cocktail culture. Now what is the Cocktail Culture? We like to describe it as a community of fellow brothers and sisters who have one similarity, Mixology.  It's about the drinks, the people who make them, the places they make them and the people who drink them. It's about the history and the who, what, when, where and why. It's about the fellowship of gathering and the hospitality of hosting. It's about sharing our worlds with one another. Physically and educationally. </CardText>
       </Card>
   </Col>
   <Col sm="4" style={style4}>
   <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
-        <CardTitle style={style2}>Why?</CardTitle>
-        <CardText style={style3}>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+        <CardTitle style={style2}>WHY?</CardTitle>
+        <CardText style={style3}></CardText>
       </Card>
   </Col>
   <Col sm="4" style={style4}>
   <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
-        <CardTitle style={style2}>Who?</CardTitle>
-        <CardText style={style3}>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+        <CardTitle style={style2}>WHO?</CardTitle>
+        <CardText style={style3}></CardText>
       </Card>
   </Col>
   </Row>
