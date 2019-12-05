@@ -24,8 +24,8 @@ import logo from "../../assets/images/baccusLogo.jpg";
 
 const style = {
   "color": "white",
-  "font-size":"25px",
-  "font-family":"serif"
+  "font-size":"29px",
+  "font-family":"fantasy"
 }
 
 const style2 = {
