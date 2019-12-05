@@ -10,15 +10,6 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build"
   },
-  "engines": {
-    "node": "11.14.0",
-    "npm": "6.x"
-  },
-  "loader": "css-loader",
-  "options": {
-    "minimize": false
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -36,6 +27,7 @@
     "highlight.js": "^9.16.2",
     "http-errors": "^1.7.3",
     "mongoose": "^5.7.13",
+    "if-env": "^1.0.4",
     "morgan": "^1.9.1",
     "request": "^2.88.0",
     "yargs": "^15.0.2"
