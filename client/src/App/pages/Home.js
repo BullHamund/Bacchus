@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import {
-  // Card,
+  Card,
   Button,
   // CardImg,
-  // CardTitle,
+  CardTitle,
   Container,
   Row,
   Col,
-  // CardText,
+  CardText,
   // CardColumns,
   // CardSubtitle,
   // CardBody,
-  Jumbotron,
+  // Jumbotron,
   InputGroup,
   InputGroupAddon,
   // InputGroupText,
@@ -21,6 +21,24 @@ import {
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
 import styled from "styled-components";
 import API from "../utils/API";
+import wall from '../assets/images/wall13.jpg'
+
+
+const style = {
+  "color": "white",
+  "text-align": "center",
+  "font-family": "Redressed",
+  "font-size": "70px"
+}
+
+const style2 = {
+  "font-size": "40px",
+  "font-family": "Asul",
+  "text-align": "center",
+}
+
+
+
 
 const Styles = styled.div``;
 
@@ -47,88 +65,98 @@ class Home extends Component {
       .catch(err => console.log(err));
   };
   render() {
-    return (
-      <div>
-        <Styles>
-          <Jumbotron fluid className="Jumbo">
-            <Container fluid>
-              <h1>Search for a cocktail...</h1>
+  return(<div>
 
-              <InputGroup>
-                <Input
-                  name="recipeSearch"
-                  value={this.state.recipeSearch}
-                  onChange={this.handleInputChange}
-                  placeholder="...by name or ingredient!"
-                />
-                <InputGroupAddon addonType="append">
-                  <Button
-                    onClick={this.handleFormSubmit}
-                    type="success"
-                    className="input-lg"
-                  >
-                    Search
-                  </Button>
-                  {/* <InputGroupText>Search</InputGroupText> */}
-                </InputGroupAddon>
-              </InputGroup>
-            </Container>
-          </Jumbotron>
-        </Styles>
+ <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat'}}>
 
-        <div>
-          <Container>
-            <Row>
-              <Col size="xs-12">
-                {!this.state.recipes.length ? (
-                  <h1 className="text-center">Bacchus must now his power resign!</h1>
-                ) : (
-                    <RecipeList>
-                      {this.state.recipes.map(recipe => {
-                        return (
-                          <RecipeListItem
-                            key={recipe.strDrink}
-                            title={recipe.strDrink}
-                            ingredients={recipe.strInstructions}
-                            thumbnail={recipe.strDrinkThumb}
-                          />
-                        );
-                      })}
-                    </RecipeList>
-                  )}
-              </Col>
-            </Row>
-          </Container>
-          <Container>
-            <Row>
-              <Col>I am the only God of wine...</Col>
-            </Row>
-            <br></br>
-            ...err, spirits? We know what you're thinking, if this is
-            a cocktail app, why'd we name it after the Greek God of wine?
-            Well in fact, he was Roman god of agriculture, wine and fertility.
-            Honest mistake, more than half of us made it too, but the point is
-            he was, to put it in lame man's terms, the God of revelry...like, partying man!
-            Sophisticatedly.
-            <br></br>
+    
+      <Col lg="6" style={{padding:'180px', color:'white'}}>
+      <h1 style={style}>Cheers to the Good Times</h1>
+        <InputGroup>
+        <Input
+                        name="recipeSearch"
+                        value={this.state.recipeSearch}
+                        onChange={this.handleInputChange}
+                        placeholder="Search for a cocktail"
+                      />
+        <InputGroupAddon addonType="append">
+        <Button
+                        onClick={this.handleFormSubmit}
+                        type="success"
+                        className="input-lg"
+                        outline color ="warning"
+                      >
+                        Search
+                      </Button>
+        </InputGroupAddon>
+      </InputGroup>
+     </Col>
+     <Col lg="5"></Col>
+    
+ </div>
 
-            So go ahead and search the database of cocktaildb.com
-            for nearly 600 cocktail recipes from the classic to not so...well...
-            not so popular since the 1970's nearly killed over a hundred years of
-            classic cocktail culture.
-            <br></br>
 
-            Then feel free to follow the links in the NavBAr ro search for articles
-            from some of the days premier cocktail blogs and events at some of your
-            local cocktail havens.
-            <br></br>
+​
+<div>
+  
+    <Container>
+    <Row>
+            <Col size="xs-12">
+              {!this.state.recipes.length ? (
+                <h1 className = "text-center"> </h1>
+              ) : (
+                <RecipeList>
+                  {this.state.recipes.map(recipe => {
+                    return (
+                      <RecipeListItem
+                        key={recipe.strDrink}
+                        title={recipe.strDrink}
+                        
+                        ingredients={recipe.strInstructions}
+                        thumbnail={recipe.strDrinkThumb}
+                      />
+                    );
+                  })}
+                </RecipeList>
+              )}
+            </Col>
+          </Row>
+      </Container>
+      
+      <Container>
+      <Row>
+      <Card body color="transparent" style={{height:'30vh', paddingTop:'30px'}}>
+        <CardTitle style={style}>Overview</CardTitle>
+      </Card>
+      </Row>
+      </Container>
+  
+  <Row>
+  <Col sm="4">
+  <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
+        <CardTitle style={style2}>What?</CardTitle>
+        <CardText>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+      </Card>
+  </Col>
+  <Col sm="4">
+  <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
+        <CardTitle style={style2}>Why?</CardTitle>
+        <CardText>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+      </Card>
+  </Col>
+  <Col sm="4">
+  <Card body inverse style={{ backgroundColor: 'transparent', borderColor: '#333' }}>
+        <CardTitle style={style2}>Who?</CardTitle>
+        <CardText>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+      </Card>
+  </Col>
+  </Row>
 
-            And remember, as a child, Bacchus was tutored by Thanos, who was a great lover of wine and often had to be carried on the back of a donkey.
-          </Container>
-        </div>
 
-      </div>
-    );
+
+     
+​</div>
+  </div>);
   }
 }
 export default Home;
