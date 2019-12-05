@@ -47,11 +47,11 @@ const Navigation = props => {
         <Navbar expand="md">
           <Container>
             <NavbarBrand className="logo" />
-            <NavbarToggler style={{background:'white'}} onClick={toggle} />
+            <NavbarToggler style={{background:'yellow'}} onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
               <Nav className="mr-auto" navbar>
                 <NavItem style={style}>
-                  <NavLink style={style2}
+                  <NavLink style={style2} 
                     tag={RouterNavLink}
                     to="/"
                     exact
@@ -62,18 +62,6 @@ const Navigation = props => {
                 </NavItem>
               </Nav>
               ​ ​
-              {/* <Nav className="mr-auto" className="justify-content-end" navbar>
-                <NavItem>
-                  <NavLink
-                    tag={RouterNavLink}
-                    to="/search"
-                    exact
-                    activeClassName="router-link-exact-active"
-                  >
-                    Search
-                  </NavLink>
-                </NavItem>
-              </Nav> */}
               ​
               <Nav className="mr-auto" className="justify-content-end" navbar>
                 <NavItem style={style}>

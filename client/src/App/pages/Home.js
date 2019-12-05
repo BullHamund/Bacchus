@@ -17,6 +17,8 @@ import { RecipeList, RecipeListItem } from "../components/RecipeList";
 import API from "../utils/API";
 import wall from '../assets/images/wall7.jpg'
 import paper from '../assets/images/paper.jpg'
+import logo from "../assets/images/baccusLogo.jpg";
+
 
 
 const style = {
@@ -73,7 +75,7 @@ class Home extends Component {
  <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat', height:'100vh'}}>
 
     
-      <Col lg="6" style={{padding:'180px', color:'white'}}>
+      <Col lg="6" style={{padding:'150px', color:'white'}}>
       <h1 style={style}>Cheers to the Good Times</h1>
         <InputGroup>
         <Input
@@ -94,6 +96,7 @@ class Home extends Component {
         </InputGroupAddon>
       </InputGroup>
      </Col>
+     
      <Col lg="5"></Col>
     
  </div>
