@@ -23,7 +23,13 @@ import logo from "../../assets/images/baccusLogo.jpg";
 
 
 const style = {
-  color: "white"
+  "color": "white",
+  "font-size":"25px",
+  "font-family":"serif"
+}
+
+const style2 = {
+  color:"white"
 }
 
 
@@ -41,11 +47,11 @@ const Navigation = props => {
         <Navbar expand="md">
           <Container>
             <NavbarBrand className="logo" />
-            <NavbarToggler onClick={toggle} />
+            <NavbarToggler style={{background:'white'}} onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
               <Nav className="mr-auto" navbar>
-                <NavItem>
-                  <NavLink
+                <NavItem style={style}>
+                  <NavLink style={style2}
                     tag={RouterNavLink}
                     to="/"
                     exact
@@ -70,8 +76,8 @@ const Navigation = props => {
               </Nav> */}
               ​
               <Nav className="mr-auto" className="justify-content-end" navbar>
-                <NavItem>
-                  <NavLink
+                <NavItem style={style}>
+                  <NavLink style={style2}
                     tag={RouterNavLink}
                     to="/api/main/getArticlescd "
                     exact
@@ -82,8 +88,8 @@ const Navigation = props => {
                 </NavItem>
               </Nav>
               <Nav className="mr-auto" className="justify-content-end" navbar>
-                <NavItem>
-                  <NavLink
+                <NavItem style={style}>
+                  <NavLink style={style2}
                     tag={RouterNavLink}
                     to="/events"
                     exact
