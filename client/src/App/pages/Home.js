@@ -3,25 +3,19 @@ import React, { Component } from "react";
 import {
   Card,
   Button,
-  // CardImg,
   CardTitle,
   Container,
   Row,
   Col,
   CardText,
-  // CardColumns,
-  // CardSubtitle,
-  // CardBody,
-  // Jumbotron,
   InputGroup,
   InputGroupAddon,
-  // InputGroupText,
   Input
 } from "reactstrap";
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
 import styled from "styled-components";
 import API from "../utils/API";
-import wall from '../assets/images/wall13.jpg'
+import wall from '../assets/images/wall7.jpg'
 
 
 const style = {
