@@ -34,9 +34,9 @@ const Navigation = props => {
     });
 
   return (
-    <div>
+    <div >
       <Navbar expand="md">
-        <Container>
+        <Container >
           <NavbarBrand className="logo"/>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
