@@ -71,7 +71,7 @@ const Navigation = props => {
                     exact
                     activeClassName="router-link-exact-active"
                   >
-                    Articles{" "}
+                    Articles
                   </NavLink>
                 </NavItem>
               </Nav>
