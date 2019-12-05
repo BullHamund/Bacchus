@@ -13,10 +13,12 @@ import {
   Input
 } from "reactstrap";
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
-import styled from "styled-components";
+// import styled from "styled-components";
 import API from "../utils/API";
 import wall from '../assets/images/wall7.jpg'
 import paper from '../assets/images/paper.jpg'
+import logo from "../assets/images/baccusLogo.jpg";
+
 
 
 const style = {
@@ -29,14 +31,18 @@ const style = {
 const style2 = {
   "color":"black",
   "font-size": "40px",
-  "font-family": "Asul",
+  "font-family": "fantasy",
   "text-align": "center",
 }
 
 const style3 = {
   "color": "black",
   "font-size": "19px",
-  "font-family": "sans",
+  "font-family": "fantasy",
+}
+
+const style4 = {
+  "padding": "25px"
 }
 
 
@@ -66,10 +72,10 @@ class Home extends Component {
   render() {
   return(<div>
 
- <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat'}}>
+ <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat', height:'100vh'}}>
 
     
-      <Col lg="6" style={{padding:'180px', color:'white'}}>
+      <Col lg="6" style={{padding:'150px', color:'white'}}>
       <h1 style={style}>Cheers to the Good Times</h1>
         <InputGroup>
         <Input
@@ -90,6 +96,7 @@ class Home extends Component {
         </InputGroupAddon>
       </InputGroup>
      </Col>
+     
      <Col lg="5"></Col>
     
  </div>
@@ -99,12 +106,12 @@ class Home extends Component {
 <div>
   
     <Container>
-    <Row>
-            <Col size="xs-12">
+    <Row >
+            <Col size="xs-12" >
               {!this.state.recipes.length ? (
-                <h1 className = "text-center"> </h1>
+                <h1 className = "text-center" > </h1>
               ) : (
-                <RecipeList>
+                <RecipeList >
                   {this.state.recipes.map(recipe => {
                     return (
                       <RecipeListItem
@@ -124,29 +131,29 @@ class Home extends Component {
       
       <Container>
       <Row>
-      <Card body color="transparent" style={{height:'30vh', paddingTop:'30px'}}>
+      <Card body color="transparent" style={{height:'25vh', paddingTop:'30px'}}>
         <CardTitle style={style}>Overview</CardTitle>
       </Card>
       </Row>
       </Container>
   
   <Row>
-  <Col sm="4">
+  <Col sm="4" style={style4}>
   <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
-        <CardTitle style={style2}>What?</CardTitle>
-        <CardText style={style3}>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+        <CardTitle style={style2}>WHAT?</CardTitle>
+        <CardText style={style3}>The goal of this app is to become a source of knowledge for all who wish to exand their curiosity in the cocktail culture. Not only do we provide ways on how to make drinks, but we also inform you of local cocktail events near you. In addition, we give you the opportunit to scrape through articles related to the cocktail culture. Now what is the Cocktail Culture? We like to describe it as a community of fellow brothers and sisters who have one similarity, Mixology. </CardText>
       </Card>
   </Col>
-  <Col sm="4">
+  <Col sm="4" style={style4}>
   <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
-        <CardTitle style={style2}>Why?</CardTitle>
-        <CardText style={style3}>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+        <CardTitle style={style2}>WHY?</CardTitle>
+        <CardText style={style3}>We do it because we like to show people that there is more to drinking alcohol. There is more to ordering the same drink at the bar on a friday night. There is more to holding up a line at a bar because you dont know what to order.  It's about the drinks, the people who make them, the places they make them and the people who drink them. It's about the history, it's about the fellowship of gathering and the hospitality of hosting. It's about sharing our worlds with one another. Physically and educationally. It's about all that and much more.</CardText>
       </Card>
   </Col>
-  <Col sm="4">
+  <Col sm="4" style={style4}>
   <Card body inverse style={{ backgroundImage:`url(${paper})`, borderColor: '#333' }}>
-        <CardTitle style={style2}>Who?</CardTitle>
-        <CardText style={style3}>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.</CardText>
+        <CardTitle style={style2}>WHO?</CardTitle>
+        <CardText style={style3}>For obvious reasons, this app is perfect for users of legal drinking age within the drinking age limit of your country. For those who wish to learn more about the Cocktail Culture. For those who just want to have a good time. </CardText>
       </Card>
   </Col>
   </Row>

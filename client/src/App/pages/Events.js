@@ -1,45 +1,104 @@
 import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
-import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { Button, Row, Container} from 'reactstrap';
+import Card from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns';
+import wall from '../assets/images/wall8.jpg'
+import paper from '../assets/images/paper2.jpg'
 
-
+const style = {
+  "color": "white",
+  "text-align": "center",
+  "font-family": "sans",
+  "font-size": "70px"
+}
 
 function Events() {
 return(<div>
-    <h1>Events</h1>
+  <div className="Background" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat', height:'100vh'}}>
+    <h1 style={style}>EVENTS</h1>
+    <Container>
     <Row>
-      <Col sm="6">
-        <Card body>
-          <CardTitle>Event 1</CardTitle>
-          <CardText>Event Information</CardText>
-          <Button>Learn More</Button>
+      <CardColumns>
+      <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
+          <Card.Header>Event</Card.Header>
+            <Card.Body>
+              <Card.Title>Card title that wraps to a new line</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                 </Card.Text>
+                  <Button outline color="primary">Follow</Button>
+            </Card.Body>
         </Card>
-      </Col>
-      <Col sm="6">
-        <Card body>
-          <CardTitle>Event 2</CardTitle>
-          <CardText>Event Information</CardText>
-          <Button>Learn More</Button>
+
+        <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
+          <Card.Header>Event</Card.Header>
+            <Card.Body>
+              <Card.Title>Card title that wraps to a new line</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                 </Card.Text>
+                  <Button outline color="primary">Follow</Button>
+            </Card.Body>
         </Card>
-      </Col>
-    </Row>
-    <Row>
-      <Col sm="6">
-        <Card body>
-          <CardTitle>Event 3</CardTitle>
-          <CardText>Event Information</CardText>
-          <Button>Learn More</Button>
+
+        <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
+          <Card.Header>Event</Card.Header>
+            <Card.Body>
+              <Card.Title>Card title that wraps to a new line</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                 </Card.Text>
+                  <Button outline color="primary">Follow</Button>
+            </Card.Body>
         </Card>
-      </Col>
-      <Col sm="6">
-        <Card body>
-          <CardTitle>Event 4</CardTitle>
-          <CardText>Event Information</CardText>
-          <Button>Learn More</Button>
+
+        <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
+          <Card.Header>Event</Card.Header>
+            <Card.Body>
+              <Card.Title>Card title that wraps to a new line</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                 </Card.Text>
+                  <Button outline color="primary">Follow</Button>
+            </Card.Body>
         </Card>
-      </Col>
-    </Row>
+
+        <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
+          <Card.Header>Event</Card.Header>
+            <Card.Body>
+              <Card.Title>Card title that wraps to a new line</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                 </Card.Text>
+                  <Button outline color="primary">Follow</Button>
+            </Card.Body>
+        </Card>
+
+        <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
+          <Card.Header>Event</Card.Header>
+            <Card.Body>
+              <Card.Title>Card title that wraps to a new line</Card.Title>
+                <Card.Text>
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                 </Card.Text>
+                  <Button outline color="primary">Follow</Button>
+            </Card.Body>
+        </Card>
+
+</CardColumns>
+
+  </Row>
+  </Container>
+
+    </div>
 </div>);
 }
 
