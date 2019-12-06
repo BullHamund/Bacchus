@@ -9,6 +9,9 @@ export default {
   },
   getArticles: function() {
     return axios.get("/api/main/getArticles") ;
+  },
+  getEvents: function() {
+    return axios.get("/api/main/getEvents") ;
   }
 
 };
