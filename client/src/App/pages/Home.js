@@ -25,22 +25,22 @@ import logo from "../assets/images/baccusLogo.jpg";
 
 const style = {
   "color": "white",
-  "text-align": "center",
-  "font-family": "Redressed",
-  "font-size": "70px"
+  "textAlign": "center",
+  "fontFamily": "Redressed",
+  "fontSize": "70px"
 }
 
 const style2 = {
   "color":"black",
-  "font-size": "40px",
-  "font-family": "fantasy",
-  "text-align": "center",
+  "fontSize": "40px",
+  "fontFamily": "fantasy",
+  "textAlign": "center",
 }
 
 const style3 = {
   "color": "black",
-  "font-size": "19px",
-  "font-family": "fantasy",
+  "fontSize": "19px",
+  "fontFamily": "fantasy",
 }
 
 const style4 = {
@@ -111,7 +111,7 @@ class Home extends Component {
     <Row >
             <Col size="xs-12" >
               {!this.state.recipes.length ? (
-                <h1 className = "text-center" > </h1>
+                <h1 className = "textCenter" > </h1>
               ) : (
                 <RecipeList >
                   {this.state.recipes.map(recipe => {
@@ -140,8 +140,8 @@ class Home extends Component {
             </Col>
             <Col lg="12" style={{padding:'150px'}}>
               <Card color="transparent" style={{ borderColor: '#333', }}>
-                  <CardTitle style={{color:'white', "font-size": "50px", "font-family": "fantasy", textAlign:'center'}}>Bacchus must now his power resign!</CardTitle>
-                  <CardText style={{color:'white', "font-size": "25px", "font-family": "fantasy", textAlign:'center'}}>...err, spirits? We know what you're thinking, if this is
+                  <CardTitle style={{color:'white', "fontSize": "50px", "fontFamily": "fantasy", textAlign:'center'}}>Bacchus must now his power resign!</CardTitle>
+                  <CardText style={{color:'white', "fontSize": "25px", "fontFamily": "fantasy", textAlign:'center'}}>...err, spirits? We know what you're thinking, if this is
             a cocktail app, why'd we name it after the Greek God of wine?
             Well in fact, he was Roman god of agriculture, wine and fertility.
             Honest mistake, more than half of us made it too, but the point is
