@@ -9,9 +9,9 @@ import paper from '../assets/images/paper2.jpg'
 
 const style = {
   "color": "white",
-  "text-align": "center",
-  "font-family": "sans",
-  "font-size": "70px"
+  "textAlign": "center",
+  "fontFamily": "sans",
+  "fontSize": "70px"
 }
 
 function Events() {

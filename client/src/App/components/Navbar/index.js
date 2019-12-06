@@ -19,7 +19,7 @@ import {
 import { NavLink as RouterNavLink } from "react-router-dom";
 import { useAuth0 } from "../../react-auth0-spa";
 import './style.css';
-import logo from "../../assets/images/baccusLogo.jpg";
+// import logo from "../../assets/images/baccusLogo.jpg";
 
 
 const style = {

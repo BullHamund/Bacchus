@@ -12,12 +12,14 @@ import {
   InputGroupAddon,
   Input
 } from "reactstrap";
+import Cards from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns';
 import { RecipeList, RecipeListItem } from "../components/RecipeList";
 // import styled from "styled-components";
 import API from "../utils/API";
 import wall from '../assets/images/wall7.jpg'
 import paper from '../assets/images/paper.jpg'
-import logo from "../assets/images/baccusLogo.jpg";
+// import logo from "../assets/images/baccusLogo.jpg";
 
 
 
@@ -72,7 +74,7 @@ class Home extends Component {
   render() {
   return(<div>
 
- <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat', height:'100vh'}}>
+ <div className="Jumbo" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat', height:'90vh', position:'unset'}}>
 
     
       <Col lg="6" style={{padding:'150px', color:'white'}}>
@@ -109,7 +111,7 @@ class Home extends Component {
     <Row >
             <Col size="xs-12" >
               {!this.state.recipes.length ? (
-                <h1 className = "text-center" > </h1>
+                <h1 className = "textCenter" > </h1>
               ) : (
                 <RecipeList >
                   {this.state.recipes.map(recipe => {
@@ -128,7 +130,34 @@ class Home extends Component {
             </Col>
           </Row>
       </Container>
-      
+
+
+
+      <div style={{height:'90vh'}}>
+        <Container>
+          <Row>
+            <Col>
+            </Col>
+            <Col lg="12" style={{padding:'150px'}}>
+              <Card color="transparent" style={{ borderColor: '#333', }}>
+                  <CardTitle style={{color:'white', "fontSize": "50px", "fontFamily": "fantasy", textAlign:'center'}}>Bacchus must now his power resign!</CardTitle>
+                  <CardText style={{color:'white', "fontSize": "25px", "fontFamily": "fantasy", textAlign:'center'}}>...err, spirits? We know what you're thinking, if this is
+            a cocktail app, why'd we name it after the Greek God of wine?
+            Well in fact, he was Roman god of agriculture, wine and fertility.
+            Honest mistake, more than half of us made it too, but the point is
+            he was, to put it in lame man's terms, the God of revelry...like, partying man!
+            Sophisticatedly.</CardText>
+              </Card>
+            </Col>
+        
+          </Row>
+        </Container>
+      </div>
+
+
+
+
+
       <Container>
       <Row>
       <Card body color="transparent" style={{height:'25vh', paddingTop:'30px'}}>
