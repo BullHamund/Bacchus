@@ -30,7 +30,6 @@
     "if-env": "^1.0.4",
     "morgan": "^1.9.1",
     "request": "^2.88.0",
-    "if-env": "^1.0.4",
     "yargs": "^15.0.2"
   },
   "devDependencies": {
