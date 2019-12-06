@@ -1,0 +1,51 @@
+[
+    {"eventName":"Drinking With Friends",
+        "eventDesc":"Getting Drunk Tonight",
+    "eventVenue":"Sidecar",
+    "eventDate":"12/5/19",
+    "eventStart":"22:00",
+    "eventEnd":"02:00"},
+
+    {"eventName":"Drinking With Friends Again",
+    "eventDesc":"Getting Drunk Tonight Again",
+    "eventVenue":"Sidecar",
+    "eventDate":"12/6/19",
+    "eventStart":"22:00",
+    "eventEnd":"02:00"},
+
+    {
+    "eventName":"Star Brews Festival",
+    "eventDesc":"Help us San Diego, you are our only hope!",
+    "eventVenue":"San Diego Air & Space Museum",
+    "eventDate":"01/4/20",
+    "eventStart":"22:00",
+    "eventEnd":"02:00"
+    },
+
+    {
+        "eventName":"Uncorked: San Diego Wine Festival",
+        "eventDesc":"back for the fifth annual Uncorked: San Diego!",
+        "eventVenue":"Embarcadero Marina Park North",
+        "eventDate":"3/28/20",
+        "eventStart":"22:00",
+        "eventEnd":"02:00"
+    },
+
+    {
+        "eventName":"San Diego Boba Festival",
+        "eventDesc":"will give boba it's long overdue celebration!",
+        "eventVenue":"Taiwanese American Foundation",
+        "eventDate":"3/28/20",
+        "eventStart":"12:00",
+        "eventEnd":"16:00"
+    },
+
+    {
+        "eventName":"wine tasting",
+        "eventDesc":"Family Winemakers of California",
+        "eventVenue":"Del Mar Fairgrounds - Bing Crosby Hall",
+        "eventDate":"3/22/20",
+        "eventStart":"10:00",
+        "eventEnd":"12:00"
+    }
+]

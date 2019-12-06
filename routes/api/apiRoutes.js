@@ -5,6 +5,7 @@ var cheerio = require("cheerio");
 var request = require("request");
 // var db = require("../models");
 var router = express.Router();
+var events = require("../../events.json");
 
 router.get("/getDrinks", (req, res) => {
      console.log("getDrinks")
@@ -23,17 +24,8 @@ router.get("/getDrinks", (req, res) => {
 })
 
 router.get("/getEvents", (req, res) => {
-
-    axios.get("https://www.eventbriteapi.com/v3/events/search/?subcategories=10004&token=/v3/users/me/?token=R2J7ZIL5EV64IE2GKMW5")
-    .then(function (response) {
-        // handle success
-        console.log(response.data);
-        res.json(response.data)
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      }) 
+  res.json(events);
+    
     })
 
     router.get("/getArticles", (req, res) => {

@@ -1,105 +1,43 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Row, Container} from 'reactstrap';
-import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns';
-import wall from '../assets/images/wall8.jpg'
-import paper from '../assets/images/paper2.jpg'
-
-const style = {
-  "color": "white",
-  "text-align": "center",
-  "font-family": "sans",
-  "font-size": "70px"
+import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import axios from 'axios';
+import API from "../utils/API";
+class Events extends React.Component {
+  state = {
+    events: []
+  }
+  componentDidMount() {
+    this.getEvents();
+  }
+  getEvents = () => {
+    API.getEvents()
+      .then(res => this.setState({events: res.data}))
+      .catch(err => console.log(err));
+  }
+  render() {
+    console.log(this.state.events)
+    const myEvents = this.state.events
+    const listEvents = myEvents.map((event) => {
+      return (
+        <Col sm="6">
+        <Card body>
+          <CardTitle>{event.eventName}</CardTitle>
+          <CardText>{event.eventDesc} <br />
+          {event.eventDate} <br/> 
+          {`${event.eventStart} - ${event.eventEnd}`}</CardText>
+          <Button>Learn More</Button>
+        </Card>
+      </Col>
+      )
+    })
+    return(
+      <div>
+        <h1>Events</h1>
+        <Row>
+          {listEvents}
+        </Row>
+    </div>);
+  }
 }
-
-function Events() {
-return(<div>
-  <div className="Background" style={{backgroundImage:`url(${wall})`, backgroundPosition:'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat', height:'100vh'}}>
-    <h1 style={style}>EVENTS</h1>
-    <Container>
-    <Row>
-      <CardColumns>
-      <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
-          <Card.Header>Event</Card.Header>
-            <Card.Body>
-              <Card.Title>Card title that wraps to a new line</Card.Title>
-                <Card.Text>
-                  This is a longer card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                 </Card.Text>
-                  <Button outline color="primary">Follow</Button>
-            </Card.Body>
-        </Card>
-
-        <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
-          <Card.Header>Event</Card.Header>
-            <Card.Body>
-              <Card.Title>Card title that wraps to a new line</Card.Title>
-                <Card.Text>
-                  This is a longer card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                 </Card.Text>
-                  <Button outline color="primary">Follow</Button>
-            </Card.Body>
-        </Card>
-
-        <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
-          <Card.Header>Event</Card.Header>
-            <Card.Body>
-              <Card.Title>Card title that wraps to a new line</Card.Title>
-                <Card.Text>
-                  This is a longer card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                 </Card.Text>
-                  <Button outline color="primary">Follow</Button>
-            </Card.Body>
-        </Card>
-
-        <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
-          <Card.Header>Event</Card.Header>
-            <Card.Body>
-              <Card.Title>Card title that wraps to a new line</Card.Title>
-                <Card.Text>
-                  This is a longer card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                 </Card.Text>
-                  <Button outline color="primary">Follow</Button>
-            </Card.Body>
-        </Card>
-
-        <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
-          <Card.Header>Event</Card.Header>
-            <Card.Body>
-              <Card.Title>Card title that wraps to a new line</Card.Title>
-                <Card.Text>
-                  This is a longer card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                 </Card.Text>
-                  <Button outline color="primary">Follow</Button>
-            </Card.Body>
-        </Card>
-
-        <Card style={{ backgroundImage:`url(${paper})`, borderColor: 'black' }}>
-          <Card.Header>Event</Card.Header>
-            <Card.Body>
-              <Card.Title>Card title that wraps to a new line</Card.Title>
-                <Card.Text>
-                  This is a longer card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                 </Card.Text>
-                  <Button outline color="primary">Follow</Button>
-            </Card.Body>
-        </Card>
-
-</CardColumns>
-
-  </Row>
-  </Container>
-
-    </div>
-</div>);
-}
-
 export default Events;
