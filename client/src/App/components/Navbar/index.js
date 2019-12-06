@@ -67,7 +67,7 @@ const Navigation = props => {
                 <NavItem style={style}>
                   <NavLink style={style2}
                     tag={RouterNavLink}
-                    to="/api/main/getArticlescd "
+                    to="/articles"
                     exact
                     activeClassName="router-link-exact-active"
                   >
