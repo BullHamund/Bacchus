@@ -41,6 +41,7 @@ router.get("/getEvents", (req, res) => {
 
     request('https://imbibemagazine.com/', (error, response, html) => {
   if (!error && response.statusCode == 200) {
+    console.log("test")
     var $ = cheerio.load(html);
     var parsedData = [];
     $('article.category-article').each(function(i, element){
@@ -56,7 +57,7 @@ router.get("/getEvents", (req, res) => {
       parsedData.push(articleData)
       console.log(parsedData);
     });
-    res.json(parsedData)
+    return res.json(parsedData);
   }
 });
     })
