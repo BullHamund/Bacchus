@@ -23,22 +23,22 @@ import logo from "../assets/images/baccusLogo.jpg";
 
 const style = {
   "color": "white",
-  "textAlign": "center",
-  "fontFamily": "Redressed",
-  "fontSize": "70px"
+  "text-align": "center",
+  "font-family": "Redressed",
+  "font-size": "70px"
 }
 
 const style2 = {
   "color":"black",
-  "fontSize": "40px",
-  "fontFamily": "fantasy",
-  "textAlign": "center",
+  "font-size": "40px",
+  "font-family": "fantasy",
+  "text-align": "center",
 }
 
 const style3 = {
   "color": "black",
-  "fontSize": "19px",
-  "fontFamily": "fantasy",
+  "font-size": "19px",
+  "font-family": "fantasy",
 }
 
 const style4 = {
@@ -76,7 +76,7 @@ class Home extends Component {
 
     
       <Col lg="6" style={{padding:'150px', color:'white'}}>
-      <h1 style={style}>Cheers to the Good Times</h1>
+      <h1 style={style}>Bacchus must now his power resign...</h1>
         <InputGroup>
         <Input
                         name="recipeSearch"
@@ -100,9 +100,6 @@ class Home extends Component {
      <Col lg="5"></Col>
     
  </div>
-
-
-​
 <div>
   
     <Container>
