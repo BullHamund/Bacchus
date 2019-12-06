@@ -19,7 +19,7 @@ import { RecipeList, RecipeListItem } from "../components/RecipeList";
 import API from "../utils/API";
 import wall from '../assets/images/wall7.jpg'
 import paper from '../assets/images/paper.jpg'
-import logo from "../assets/images/baccusLogo.jpg";
+// import logo from "../assets/images/baccusLogo.jpg";
 
 
 
