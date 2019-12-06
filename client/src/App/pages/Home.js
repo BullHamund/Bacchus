@@ -23,22 +23,22 @@ import logo from "../assets/images/baccusLogo.jpg";
 
 const style = {
   "color": "white",
-  "text-align": "center",
-  "font-family": "Redressed",
-  "font-size": "70px"
+  "textAlign": "center",
+  "fontFamily": "Redressed",
+  "fontSize": "70px"
 }
 
 const style2 = {
   "color":"black",
-  "font-size": "40px",
-  "font-family": "fantasy",
-  "text-align": "center",
+  "fontSize": "40px",
+  "fontFamily": "fantasy",
+  "textAlign": "center",
 }
 
 const style3 = {
   "color": "black",
-  "font-size": "19px",
-  "font-family": "fantasy",
+  "fontSize": "19px",
+  "fontFamily": "fantasy",
 }
 
 const style4 = {
